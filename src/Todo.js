@@ -14,6 +14,8 @@ import { db } from "./firebase";
 import { makeStyles } from "@material-ui/core/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from '@material-ui/icons/Edit';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -75,10 +77,26 @@ function Todo(props) {
 
         </div>
       </Modal>
+
+
+      <Box
+      sx={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        '& > :not(style)': {
+          m: 1,
+          width: 1,
+          height: 128,
+        },
+      }}
+    >
+      <Paper elevation={6} >
+
+
       <List className="todo__list">
         <ListItem>
           <ListItemAvatar></ListItemAvatar>
-          <ListItemText primary={props.todo.todo} secondary="Uploaded Task 🤞 "    />
+          <ListItemText primary={props.todo.todo} secondary="Task uploaded"    />
         </ListItem>
         <Button
           variant="outlined"
@@ -103,6 +121,14 @@ function Todo(props) {
         </Button>
 
       </List>
+
+
+
+
+      </Paper>
+      
+    </Box>
+
     </>
   );
 }
