@@ -38,8 +38,8 @@ function Todo(props) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState();
 
-  // const handleOpen = () => {
-  //   setOpen(true);
+  const handleOpen = () => {
+    setOpen(true);
   };
 
   const updateTodo = () => {
