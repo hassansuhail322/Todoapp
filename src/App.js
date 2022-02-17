@@ -10,6 +10,8 @@ import Todo from "./Todo";
 import { db } from "./firebase";
 import firebase from "firebase";
 import "./index";
+import {Slide,Zoom} from 'react-reveal';
+
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -37,7 +39,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="App-header">Todo List </h1>
+
+
+
+      <div className="App-header">
+      <Zoom left duration = {2000}>
+
+        <h1>Todo List</h1>
+      </Zoom>
+      </div>
       <form>
         <FormControl>
           <InputLabel>
@@ -50,7 +60,7 @@ function App() {
             value={input}
             onChange={(Event) => setInput(Event.target.value)}
           />
-          <FormHelperText>Enter the task you want to do </FormHelperText>
+          <FormHelperText>Enter task you want to do </FormHelperText>
         </FormControl>
 
         <Button

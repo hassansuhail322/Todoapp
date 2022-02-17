@@ -1,5 +1,9 @@
 .todo__list{
+    display: flex;
+    align-items: center;
     /* border: 2px solid red; */
-    text-align: center;
-    flex-direction: column;
+    /* text-align: center; */
+    /* flex-direction: column; */
+    justify-content: center;
 }
+
